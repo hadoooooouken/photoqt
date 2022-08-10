@@ -1,0 +1,101 @@
+body { margin: 0; }
+
+.main {
+    /*background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
+    background-image: url(./bg.jpg);
+    background-repeat: no-repeat;
+    display: flex;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.metadata {
+    opacity: 0;
+    width: 340px;
+    height: 470px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-left: 20px;
+    background: #292929;
+    background-image: url(./meta.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 8px;
+    transition: opacity .5s ease-in-out;
+    backdrop-filter: blur(20px);
+}
+
+.menu {
+    position: relative;
+    right: 60px;
+    opacity: 0;
+    width: 340px;
+    height: 760px;
+    padding: 20px;
+    margin-top: 40px;
+    margin-right: 20px;
+    background: #292929;
+    background-image: url(./mainmenu.png);
+    background-repeat: no-repeat;
+    color: #fff;
+    border-radius: 8px;
+    transition: opacity .5s ease-in-out;
+}
+
+.left_edge {
+    background: rgba(204, 0, 255, .3);
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 100vh;
+    padding-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    writing-mode: vertical-rl;
+}
+
+.left_edge:hover {
+    background: rgba(204, 0, 255, .6);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.left_edge:hover + .metadata {
+    opacity: .8;
+    transition: opacity .5s ease-in-out;
+}
+
+.fill-remaining-space {
+    flex: auto;
+    text-align: center;
+    align-self: center;
+    color: rgba(255, 255, 255, .5);
+    opacity: 0.7;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.right_edge {
+    position: relative;
+    left: 400px;
+    background: rgba(204, 0, 255, .3);
+    backdrop-filter: blur(8px);
+    color: rgba(255, 255, 255, 0.5);
+    width: 40px;
+    height: 100vh;
+    padding-right: 20px;
+    font-size: 24px;
+    text-align: center;
+    writing-mode: vertical-rl;
+}
+
+.right_edge:hover {
+    background: rgba(204, 0, 255, .6);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.right_edge:hover + .menu {
+    opacity: .8;
+    transition: opacity .5s ease-in-out;
+}
