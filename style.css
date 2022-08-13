@@ -12,6 +12,14 @@ body { margin: 0; }
     font-size: 16px;
 }
 
+.left_zone {
+    opacity: 0;
+    width: 420px;
+    height: 100vh;
+    border: 2px solid pink;
+    color: pink;   
+}
+
 .metadata {
     opacity: 0;
     width: 340px;
@@ -62,7 +70,9 @@ body { margin: 0; }
     color: rgba(255, 255, 255, 0.8);
 }
 
-.left_edge:hover + .metadata {
+.left_edge:hover + .left_zone > .metadata,
+.left_edge:hover + .left_zone
+{
     opacity: .8;
     transition: opacity .5s ease-in-out;
 }
